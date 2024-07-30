@@ -1,22 +1,25 @@
-# Write a function that lets the user add items to a list
+def shopping_list_maker():
+    shopping_list = []
 
-def add_item(shopping_list):
-    item = input("Enter the item you want to add: ")
-    shopping_list.append(item)
-    print(f"Added '{item}' to your shopping list.")
+    while True:
+        print("Shopping List Maker")
+        print("1. Add item")
+        print("2. Remove item")
+        print("3. Print list")
+        print("4. Quit")
 
-# Include a function to remove items from a list
-    def remove_item(shopping_list):
-        item = input("Enter the item you want to remove: ")
-        if item in shopping_list:
-            shopping_list.remove(item)
-            print(f"Removed '{item}' from your shopping list.")
+        choice = input("What would you like to do? ")
+
+        if choice == "1":
+            add_item(shopping_list)
+        elif choice == "2":
+            remove_item(shopping_list)
+        elif choice == "3":
+            print_list(shopping_list)
+        elif choice == "4":
+            print("Goodbye!")
+            break
         else:
-            print(f"'{item}' is not in your shopping list.")
+            print("Invalid choice. Please try again.")
 
-# Add a function that prints out the entire list in a formatted way
-
-def print_list(shopping_list):
-    print("In Your shopping list:")
-    for i, item in enumerate(shopping_list, start=1):
-        print(f"{i}. {item}")
+shopping_list_maker()
