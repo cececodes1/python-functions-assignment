@@ -1,3 +1,19 @@
+#Defining the functions
+def add(num1, num2):
+    return num1 + num2
+
+def subtract(num1, num2):
+    return num1 - num2
+
+def multiply(num1, num2):
+    return num1 * num2
+
+def divide(num1, num2):
+    if num2 == 0:
+        return "Error: Division by zero is not allowed."
+    else:
+        return num1 / num2
+        
 def calculator():
     while True:
         print("Calculator App")
